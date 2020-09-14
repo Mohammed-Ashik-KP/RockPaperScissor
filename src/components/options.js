@@ -2,15 +2,15 @@ import React, { useContext, useEffect, useState } from 'react';
 import rock from '../icons/rock.png'
 import paper from '../icons/paper.png'
 import scissor from '../icons/scissor.png'
-import  OptionProvider ,{ OptionContext } from '../context/context';
+import  { OptionContext } from '../context/context';
 
 const Options = () => {
-    const{ Option , setOption, SystemOption , setSystemOption } = useContext(OptionContext); 
+    let { Option , setOption, SystemOption , setSystemOption, systemScore , setSystemScore , userScore , setUserScore} = useContext(OptionContext); 
     const [update , setUpdate] = useState(true);
     const  handleClick = (e)=>{
         setOption(e);
         setUpdate(!update)
-       const random = Math.floor(Math.random()*3);
+       let random = Math.floor(Math.random()*3);
        const options=[rock,paper,scissor];
        setSystemOption(options[random])
        
@@ -20,35 +20,37 @@ const Options = () => {
             switch (Option) {
                 case rock:
                        if(SystemOption===rock){
-                           console.log('draw')
+                           
                        }
                        if(SystemOption===paper){
-                           console.log('system wins')
+                        
+                            setSystemScore(systemScore+1)
                        }
                        if(SystemOption===scissor){
-                           console.log("user wins")
+                         setUserScore(userScore+1)
                        }
                     break;
                 case paper:
                         if(SystemOption===rock){
-                            console.log('user wins')
+                        setUserScore(userScore+1)
                         }
                         if(SystemOption===paper){
-                            console.log('draw')
+                           
                         }
                         if(SystemOption===scissor){
-                            console.log("system wins")
+                            setSystemScore(systemScore+1)
+                            
                         }
                      break;
                 case scissor:
                        if(SystemOption===rock){
-                           console.log('system win')
+                        setSystemScore(systemScore+1)
                        }
                        if(SystemOption===paper){
-                           console.log('user wins')
+                        setUserScore(userScore+1)
                        }
                        if(SystemOption===scissor){
-                           console.log("draw")
+                      
                        }
                     break;
                 default:

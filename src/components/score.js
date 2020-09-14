@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { OptionContext } from '../context/context';
 const Score = () => {
+    const {userScore , systemScore} = useContext(OptionContext);
+    console.log(userScore)
     return ( 
         <React.Fragment>
             <div className="row">
@@ -15,10 +18,10 @@ const Score = () => {
               </div>
               <div className="row score">
               <div className="col text-center m-2">
-                                0
+                                {userScore}
                 </div>
                 <div className="col text-center m-2">
-                    0
+                                {systemScore}
                 </div>
               </div>
            

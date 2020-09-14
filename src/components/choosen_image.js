@@ -5,7 +5,7 @@ import scissor from '../icons/scissor.png'
 import qm from '../icons/qm.png'
 import { OptionContext } from '../context/context';
 const ChoosenImage = () => {
-    const{ Option , setOption ,SystemOption , setSystemOption} = useContext(OptionContext);
+    const{ Option ,SystemOption } = useContext(OptionContext);
     return (  
         <React.Fragment>
             <div className="row">
