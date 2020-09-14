@@ -78,6 +78,11 @@ const Options = () => {
                       <p className="text-dark font-weight-bold">Scissor</p>
                 </div>
             </div>
+            <div className="row mt-3">
+                <div className="col text-center d-flex justify-content-center align-items-center">
+                    <div className="button btn btn-danger">Reset</div>
+                </div>
+            </div>
         </React.Fragment>
      );
 }

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { OptionContext } from '../context/context';
 const Score = () => {
     const {userScore , systemScore} = useContext(OptionContext);
-    console.log(userScore)
     return ( 
         <React.Fragment>
             <div className="row">
@@ -13,7 +12,7 @@ const Score = () => {
                                 You
                 </div>
                 <div className="col text-center">
-                    Robo
+                    System
                 </div>
               </div>
               <div className="row score">

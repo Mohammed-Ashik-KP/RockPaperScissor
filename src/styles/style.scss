@@ -47,13 +47,14 @@
     transition: all .5s ease-in-out;
     
     img{
-        animation: zoom 0.5s 1;
+        animation: zoom .8s 1;
+        transition: all .5s ease-in-out;
         }
      }
 
 @keyframes zoom{
     0%{
-        transform: scale(0);
+        transform: scale(0.2);
     }
     90%{
         transform: scale(1);
