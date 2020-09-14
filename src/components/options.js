@@ -13,8 +13,11 @@ const Options = () => {
        let random = Math.floor(Math.random()*3);
        const options=[rock,paper,scissor];
        setSystemOption(options[random])
-       
-      
+
+    }
+    const handleReset = () =>{
+        setSystemScore(0);
+        setUserScore(0);
     }
     useEffect(()=>{
             switch (Option) {
@@ -80,7 +83,7 @@ const Options = () => {
             </div>
             <div className="row mt-3">
                 <div className="col text-center d-flex justify-content-center align-items-center">
-                    <div className="button btn btn-danger">Reset</div>
+                    <div className="button btn btn-danger" onClick={(e)=>{handleReset()}}>Reset</div>
                 </div>
             </div>
         </React.Fragment>
