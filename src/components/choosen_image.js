@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+ // eslint-disable-next-line
 import React, { useContext } from 'react';
 import rock from '../icons/rock.png'
 import paper from '../icons/paper.png'
@@ -12,7 +14,7 @@ const ChoosenImage = () => {
                 <div className="col text-center mt-4  choosenimg">
                         <img src={Option} alt='rock' height="52px"/>
                 </div>
-                <div className="col text-center mt-4  choosenimg">
+                <div className="col text-center mt-4  choosenimg ">
                         <img src={SystemOption} alt='rock' height="52px"/>
                 </div>
             </div>

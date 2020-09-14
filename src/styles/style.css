@@ -5,6 +5,15 @@
           box-sizing: border-box;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav-row {
   position: relative;
   height: 100px;
@@ -89,12 +98,22 @@
   cursor: pointer;
 }
 
+.option img {
+  -webkit-filter: drop-shadow(5px 5px 3px #333);
+          filter: drop-shadow(5px 5px 3px #333);
+}
+
 .footer-row {
   background-color: #2B2B52;
   font-size: 14px;
+  height: 90px;
 }
 
 .footer-row span {
   color: #be1237;
+}
+
+.footer-icon {
+  font-size: 22px;
 }
 /*# sourceMappingURL=style.css.map */

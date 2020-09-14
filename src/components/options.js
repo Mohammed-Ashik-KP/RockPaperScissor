@@ -7,18 +7,28 @@ import  { OptionContext } from '../context/context';
 const Options = () => {
     let { Option , setOption, SystemOption , setSystemOption, systemScore , setSystemScore , userScore , setUserScore} = useContext(OptionContext); 
     const [update , setUpdate] = useState(true);
+
+   // when User Click On A Option
+
     const  handleClick = (e)=>{
         setOption(e);
         setUpdate(!update)
-       let random = Math.floor(Math.random()*3);
-       const options=[rock,paper,scissor];
+
+    //Generate A Random Number And Select The Item With That Index In The Options Array
+       let random = Math.floor(Math.random()*6);
+       const options=[rock,paper,scissor,rock,paper,scissor];
        setSystemOption(options[random])
 
     }
+
+
+    //Resets The Score
     const handleReset = () =>{
         setSystemScore(0);
         setUserScore(0);
     }
+
+    //Calculates The Score
     useEffect(()=>{
             switch (Option) {
                 case rock:
@@ -59,7 +69,10 @@ const Options = () => {
                 default:
                     break;
             }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ update, Option])
+
+
     return ( 
         <React.Fragment>
             <div className="row mt-3">
