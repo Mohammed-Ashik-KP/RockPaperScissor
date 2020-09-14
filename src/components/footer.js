@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="mt-3 footer-row">
             <div className="row">
                 <div className="col-12 font-weight-bold text-white text-center d-flex justify-content-center align-items-center">
-                            RPS Build With JS <br/> Aashiq Otp <br/>
+                            RPS Built With JS <br/> Aashiq Otp <br/>
             </div></div>
                         <div className="row mt-2 mb-2 text-center d-flex justify-content-between">
                             <div className="col ml-4 text-white footer-icon">
